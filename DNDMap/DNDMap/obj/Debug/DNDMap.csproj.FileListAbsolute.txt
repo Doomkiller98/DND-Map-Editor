@@ -1,0 +1,10 @@
+D:\DND Map Creator\DNDMap\DNDMap\bin\Debug\DNDMap.exe.config
+D:\DND Map Creator\DNDMap\DNDMap\bin\Debug\DNDMap.exe
+D:\DND Map Creator\DNDMap\DNDMap\bin\Debug\DNDMap.pdb
+D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.csprojResolveAssemblyReference.cache
+D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.Form1.resources
+D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.Properties.Resources.resources
+D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.GenerateResource.Cache
+D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.CoreCompileInputs.cache
+D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.exe
+D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.pdb
