@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DNDMap
 {
@@ -16,8 +17,16 @@ namespace DNDMap
         {
             InitializeComponent();
             string[] filepaths = System.IO.Directory.GetFiles("..\\..\\Images\\Floor");
+            foreach (string file in filepaths)
+            {
+                string filename = file;
+                string result = filename.Replace("..\\..\\Images\\Floor\\", "");
+                string tileName = result.Replace(".png", "");
 
-            this.floorCB.Items.AddRange(filepaths);
+                floorCB.Items.Add(tileName);
+            }
+            floorCB.SelectedIndex = 0;
+            obstaclesCB.SelectedIndex = 0;
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
@@ -56,9 +65,18 @@ namespace DNDMap
         private void Change(object sender, EventArgs e)
         {
             PictureBox picture = sender as PictureBox;
+            string filePath = picture.ImageLocation;
             if (mapEditRB.Checked == true)
             {
-                picture.Image = Image.FromFile("..\\..\\Images\\Floor\\Wooden Floor.png");
+                string floor = floorCB.GetItemText(floorCB.SelectedItem);
+                picture.Image = Image.FromFile("..\\..\\Images\\Floor\\"+ floor + ".png");
+            }
+            if (obstaclesRD.Checked == true && filePath.Contains("\\Empty") == false)
+            {
+                string Obstacle = obstaclesCB.GetItemText(obstaclesCB.SelectedItem);
+                string img1 = "..\\..\\Images\\Obstacle"+ Obstacle + ".png";
+                string img2 = filePath;
+                string imgCombinedFO = 
             }
 
         }

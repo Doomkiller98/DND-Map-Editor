@@ -8,3 +8,13 @@ D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.GenerateResource.Cache
 D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.CoreCompileInputs.cache
 D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.exe
 D:\DND Map Creator\DNDMap\DNDMap\obj\Debug\DNDMap.pdb
+E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\bin\Debug\DNDMap.exe.config
+E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\bin\Debug\DNDMap.exe
+E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\bin\Debug\DNDMap.pdb
+E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.csprojResolveAssemblyReference.cache
+E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.Form1.resources
+E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.Properties.Resources.resources
+E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.GenerateResource.cache
+E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.CoreCompileInputs.cache
+E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.exe
+E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.pdb
