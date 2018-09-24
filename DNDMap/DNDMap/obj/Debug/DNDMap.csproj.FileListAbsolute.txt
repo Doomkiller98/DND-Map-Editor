@@ -18,3 +18,10 @@ E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DND
 E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.CoreCompileInputs.cache
 E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.exe
 E:\Projects\DND\DND-Map-Editor\DNDMap\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.pdb
+D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.csprojResolveAssemblyReference.cache
+D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.Form1.resources
+D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.Properties.Resources.resources
+D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.GenerateResource.Cache
+D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.CoreCompileInputs.cache
+D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.exe
+D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.pdb

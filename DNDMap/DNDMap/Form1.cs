@@ -25,6 +25,15 @@ namespace DNDMap
 
                 floorCB.Items.Add(tileName);
             }
+            string[] filepathsObst = System.IO.Directory.GetFiles("..\\..\\Images\\Obstacle");
+            foreach (string file in filepathsObst)
+            {
+                string filename = file;
+                string result = filename.Replace("..\\..\\Images\\Floor\\", "");
+                string tileName = result.Replace(".png", "");
+
+                obstaclesCB.Items.Add(tileName);
+            }
             floorCB.SelectedIndex = 0;
             obstaclesCB.SelectedIndex = 0;
         }
@@ -76,7 +85,7 @@ namespace DNDMap
                 string Obstacle = obstaclesCB.GetItemText(obstaclesCB.SelectedItem);
                 string img1 = "..\\..\\Images\\Obstacle"+ Obstacle + ".png";
                 string img2 = filePath;
-                string imgCombinedFO = 
+                string imgCombinedFO =  "..\\..\\Images\\CombinedObstFlr\\" + Obstacle + 
             }
 
         }
