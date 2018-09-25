@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.mapEditRB = new System.Windows.Forms.RadioButton();
             this.monsterMovementRD = new System.Windows.Forms.RadioButton();
             this.modeGB = new System.Windows.Forms.GroupBox();
@@ -44,12 +43,14 @@
             this.floorTilesLabel = new System.Windows.Forms.Label();
             this.obstaclesCB = new System.Windows.Forms.ComboBox();
             this.obstaclesLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.editGB = new System.Windows.Forms.GroupBox();
+            this.addRB = new System.Windows.Forms.RadioButton();
+            this.eraseRB = new System.Windows.Forms.RadioButton();
             this.modeGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heightNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthNUD)).BeginInit();
             this.mapSizeGB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.editGB.SuspendLayout();
             this.SuspendLayout();
             // 
             // mapEditRB
@@ -79,9 +80,9 @@
             this.modeGB.Controls.Add(this.obstaclesRD);
             this.modeGB.Controls.Add(this.mapEditRB);
             this.modeGB.Controls.Add(this.monsterMovementRD);
-            this.modeGB.Location = new System.Drawing.Point(724, 12);
+            this.modeGB.Location = new System.Drawing.Point(724, 31);
             this.modeGB.Name = "modeGB";
-            this.modeGB.Size = new System.Drawing.Size(200, 100);
+            this.modeGB.Size = new System.Drawing.Size(200, 81);
             this.modeGB.TabIndex = 2;
             this.modeGB.TabStop = false;
             this.modeGB.Text = "Mode Box";
@@ -90,7 +91,7 @@
             // 
             this.obstaclesRD.AutoSize = true;
             this.obstaclesRD.Location = new System.Drawing.Point(5, 35);
-            this.obstaclesRD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.obstaclesRD.Margin = new System.Windows.Forms.Padding(2);
             this.obstaclesRD.Name = "obstaclesRD";
             this.obstaclesRD.Size = new System.Drawing.Size(72, 17);
             this.obstaclesRD.TabIndex = 2;
@@ -156,9 +157,9 @@
             // 
             // gridTable
             // 
-            this.gridTable.Location = new System.Drawing.Point(13, 13);
+            this.gridTable.Location = new System.Drawing.Point(13, 31);
             this.gridTable.Name = "gridTable";
-            this.gridTable.Size = new System.Drawing.Size(705, 612);
+            this.gridTable.Size = new System.Drawing.Size(705, 594);
             this.gridTable.TabIndex = 6;
             // 
             // floorCB
@@ -183,7 +184,7 @@
             // 
             this.obstaclesCB.FormattingEnabled = true;
             this.obstaclesCB.Location = new System.Drawing.Point(736, 324);
-            this.obstaclesCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.obstaclesCB.Margin = new System.Windows.Forms.Padding(2);
             this.obstaclesCB.Name = "obstaclesCB";
             this.obstaclesCB.Size = new System.Drawing.Size(182, 21);
             this.obstaclesCB.TabIndex = 9;
@@ -198,22 +199,46 @@
             this.obstaclesLabel.TabIndex = 10;
             this.obstaclesLabel.Text = "Obstacles";
             // 
-            // pictureBox1
+            // editGB
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(751, 442);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 32);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.editGB.Controls.Add(this.eraseRB);
+            this.editGB.Controls.Add(this.addRB);
+            this.editGB.Location = new System.Drawing.Point(724, 425);
+            this.editGB.Name = "editGB";
+            this.editGB.Size = new System.Drawing.Size(200, 100);
+            this.editGB.TabIndex = 11;
+            this.editGB.TabStop = false;
+            this.editGB.Text = "Edit Box";
+            // 
+            // addRB
+            // 
+            this.addRB.AutoSize = true;
+            this.addRB.Checked = true;
+            this.addRB.Location = new System.Drawing.Point(7, 20);
+            this.addRB.Name = "addRB";
+            this.addRB.Size = new System.Drawing.Size(44, 17);
+            this.addRB.TabIndex = 0;
+            this.addRB.TabStop = true;
+            this.addRB.Text = "Add";
+            this.addRB.UseVisualStyleBackColor = true;
+            // 
+            // eraseRB
+            // 
+            this.eraseRB.AutoSize = true;
+            this.eraseRB.Location = new System.Drawing.Point(7, 44);
+            this.eraseRB.Name = "eraseRB";
+            this.eraseRB.Size = new System.Drawing.Size(52, 17);
+            this.eraseRB.TabIndex = 1;
+            this.eraseRB.TabStop = true;
+            this.eraseRB.Text = "Erase";
+            this.eraseRB.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 655);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.editGB);
             this.Controls.Add(this.obstaclesLabel);
             this.Controls.Add(this.obstaclesCB);
             this.Controls.Add(this.floorTilesLabel);
@@ -229,7 +254,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.widthNUD)).EndInit();
             this.mapSizeGB.ResumeLayout(false);
             this.mapSizeGB.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.editGB.ResumeLayout(false);
+            this.editGB.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,7 +278,9 @@
         private System.Windows.Forms.Label floorTilesLabel;
         private System.Windows.Forms.ComboBox obstaclesCB;
         private System.Windows.Forms.Label obstaclesLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox editGB;
+        private System.Windows.Forms.RadioButton eraseRB;
+        private System.Windows.Forms.RadioButton addRB;
     }
 }
 

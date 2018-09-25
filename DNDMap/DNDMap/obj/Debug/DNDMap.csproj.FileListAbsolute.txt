@@ -25,3 +25,6 @@ D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.GenerateResour
 D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.csproj.CoreCompileInputs.cache
 D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.exe
 D:\projecten\DND-Map-Editor\DNDMap\DNDMap\obj\Debug\DNDMap.pdb
+D:\projecten\DND-Map-Editor\DNDMap\DNDMap\bin\Debug\DNDMap.exe.config
+D:\projecten\DND-Map-Editor\DNDMap\DNDMap\bin\Debug\DNDMap.exe
+D:\projecten\DND-Map-Editor\DNDMap\DNDMap\bin\Debug\DNDMap.pdb

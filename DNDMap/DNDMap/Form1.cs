@@ -29,7 +29,7 @@ namespace DNDMap
             foreach (string file in filepathsObst)
             {
                 string filename = file;
-                string result = filename.Replace("..\\..\\Images\\Floor\\", "");
+                string result = filename.Replace("..\\..\\Images\\Obstacle\\", "");
                 string tileName = result.Replace(".png", "");
 
                 obstaclesCB.Items.Add(tileName);
@@ -54,17 +54,17 @@ namespace DNDMap
                 CurrentWidth = 1;
                 while (CurrentWidth <= Width)
                 {
-                    PictureBox picture = new PictureBox
+                    PictureBox MapTile = new PictureBox
                     {
                         Name = "Tile-" + Convert.ToString(CurrentHeight) + "." + Convert.ToString(CurrentWidth),
                         Size = new Size(50, 50),
                         Image = Image.FromFile("..\\..\\Images\\Empty\\border.png"),
                         
                     };
-                    picture.Padding = new Padding(0);
-                    picture.Margin = new Padding(0);
-                    picture.Click += new EventHandler(this.Change);
-                    gridTable.Controls.Add(picture);
+                    MapTile.Padding = new Padding(0);
+                    MapTile.Margin = new Padding(0);
+                    MapTile.Click += new EventHandler(this.Change);
+                    gridTable.Controls.Add(MapTile);
                     CurrentWidth += 1;
                 }
                 CurrentHeight += 1;
@@ -73,19 +73,62 @@ namespace DNDMap
 
         private void Change(object sender, EventArgs e)
         {
-            PictureBox picture = sender as PictureBox;
-            string filePath = picture.ImageLocation;
+            PictureBox MapTile = sender as PictureBox;
+            string filePath = MapTile.ImageLocation;
             if (mapEditRB.Checked == true)
             {
                 string floor = floorCB.GetItemText(floorCB.SelectedItem);
-                picture.Image = Image.FromFile("..\\..\\Images\\Floor\\"+ floor + ".png");
+                MapTile.Image = Image.FromFile("..\\..\\Images\\Floor\\"+ floor + ".png");
             }
-            if (obstaclesRD.Checked == true && filePath.Contains("\\Empty") == false)
+            if (obstaclesRD.Checked == true)
             {
+                string floor = floorCB.GetItemText(floorCB.SelectedItem);
                 string Obstacle = obstaclesCB.GetItemText(obstaclesCB.SelectedItem);
-                string img1 = "..\\..\\Images\\Obstacle"+ Obstacle + ".png";
+                string img1 = "..\\..\\Images\\Obstacle\\" + Obstacle + ".png";
                 string img2 = filePath;
-                string imgCombinedFO =  "..\\..\\Images\\CombinedObstFlr\\" + Obstacle + 
+                string name = img2.Replace("..\\..\\Images\\Floor\\", "");
+                string result = name.Replace(".png", "");
+                string imgCombinedFO = "..\\..\\Images\\CombinedObstFlr\\" + Obstacle + "+" + floor;
+
+                if (eraseRB.Checked == true)
+                {
+                    string input = MapTile.ImageLocation;
+                    string output = input.Substring(input.IndexOf('+') + 1);
+                    MapTile.Image = Image.FromFile("..\\..\\Images\\Floor\\" + output + ".png");
+                }
+                else
+                {
+                    if (File.Exists(imgCombinedFO))
+                    {
+                        MapTile.Image = Image.FromFile(imgCombinedFO);
+                    }
+                    else
+                    {
+                        Image obstacleImg = Image.FromFile(img1);
+                        Image floorImg = Image.FromFile(img2);
+
+                        int width = floorImg.Width;
+                        int height = floorImg.Height;
+
+                        Bitmap comboObstFlr = new Bitmap(width, height);
+                        Graphics g = Graphics.FromImage(comboObstFlr);
+
+                        g.Clear(Color.Black);
+                        g.DrawImage(floorImg, new Point(0, 0));
+                        g.DrawImage(obstacleImg, new Point(0, 0));
+
+                        g.Dispose();
+                        obstacleImg.Dispose();
+                        floorImg.Dispose();
+
+                        comboObstFlr.Save(imgCombinedFO, System.Drawing.Imaging.ImageFormat.Png);
+                        MapTile.Image = Image.FromFile(imgCombinedFO);
+                        comboObstFlr.Dispose();
+
+                    }
+                }
+                
+
             }
 
         }
