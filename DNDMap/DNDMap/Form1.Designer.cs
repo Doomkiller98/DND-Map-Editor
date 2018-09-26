@@ -44,13 +44,15 @@
             this.obstaclesCB = new System.Windows.Forms.ComboBox();
             this.obstaclesLabel = new System.Windows.Forms.Label();
             this.editGB = new System.Windows.Forms.GroupBox();
-            this.addRB = new System.Windows.Forms.RadioButton();
             this.eraseRB = new System.Windows.Forms.RadioButton();
+            this.addRB = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.modeGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heightNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthNUD)).BeginInit();
             this.mapSizeGB.SuspendLayout();
             this.editGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mapEditRB
@@ -210,6 +212,17 @@
             this.editGB.TabStop = false;
             this.editGB.Text = "Edit Box";
             // 
+            // eraseRB
+            // 
+            this.eraseRB.AutoSize = true;
+            this.eraseRB.Location = new System.Drawing.Point(7, 44);
+            this.eraseRB.Name = "eraseRB";
+            this.eraseRB.Size = new System.Drawing.Size(52, 17);
+            this.eraseRB.TabIndex = 1;
+            this.eraseRB.TabStop = true;
+            this.eraseRB.Text = "Erase";
+            this.eraseRB.UseVisualStyleBackColor = true;
+            // 
             // addRB
             // 
             this.addRB.AutoSize = true;
@@ -222,22 +235,20 @@
             this.addRB.Text = "Add";
             this.addRB.UseVisualStyleBackColor = true;
             // 
-            // eraseRB
+            // pictureBox1
             // 
-            this.eraseRB.AutoSize = true;
-            this.eraseRB.Location = new System.Drawing.Point(7, 44);
-            this.eraseRB.Name = "eraseRB";
-            this.eraseRB.Size = new System.Drawing.Size(52, 17);
-            this.eraseRB.TabIndex = 1;
-            this.eraseRB.TabStop = true;
-            this.eraseRB.Text = "Erase";
-            this.eraseRB.UseVisualStyleBackColor = true;
+            this.pictureBox1.Location = new System.Drawing.Point(742, 551);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 655);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.editGB);
             this.Controls.Add(this.obstaclesLabel);
             this.Controls.Add(this.obstaclesCB);
@@ -256,6 +267,7 @@
             this.mapSizeGB.PerformLayout();
             this.editGB.ResumeLayout(false);
             this.editGB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,6 +293,7 @@
         private System.Windows.Forms.GroupBox editGB;
         private System.Windows.Forms.RadioButton eraseRB;
         private System.Windows.Forms.RadioButton addRB;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

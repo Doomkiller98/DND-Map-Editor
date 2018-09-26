@@ -78,29 +78,28 @@ namespace DNDMap
             if (mapEditRB.Checked == true)
             {
                 string floor = floorCB.GetItemText(floorCB.SelectedItem);
-                MapTile.Image = Image.FromFile("..\\..\\Images\\Floor\\"+ floor + ".png");
+                MapTile.Load("..\\..\\Images\\Floor\\"+ floor + ".png");
             }
             if (obstaclesRD.Checked == true)
             {
-                string floor = floorCB.GetItemText(floorCB.SelectedItem);
                 string Obstacle = obstaclesCB.GetItemText(obstaclesCB.SelectedItem);
                 string img1 = "..\\..\\Images\\Obstacle\\" + Obstacle + ".png";
                 string img2 = filePath;
                 string name = img2.Replace("..\\..\\Images\\Floor\\", "");
-                string result = name.Replace(".png", "");
+                string floor = name.Replace(".png", "");
                 string imgCombinedFO = "..\\..\\Images\\CombinedObstFlr\\" + Obstacle + "+" + floor;
 
                 if (eraseRB.Checked == true)
                 {
                     string input = MapTile.ImageLocation;
                     string output = input.Substring(input.IndexOf('+') + 1);
-                    MapTile.Image = Image.FromFile("..\\..\\Images\\Floor\\" + output + ".png");
+                    MapTile.Load("..\\..\\Images\\Floor\\" + output + ".png");
                 }
                 else
                 {
                     if (File.Exists(imgCombinedFO))
                     {
-                        MapTile.Image = Image.FromFile(imgCombinedFO);
+                        MapTile.Load(imgCombinedFO);
                     }
                     else
                     {
