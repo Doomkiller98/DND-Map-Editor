@@ -47,12 +47,17 @@
             this.eraseRB = new System.Windows.Forms.RadioButton();
             this.addRB = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.modeGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heightNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthNUD)).BeginInit();
             this.mapSizeGB.SuspendLayout();
             this.editGB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mapEditRB
@@ -159,9 +164,9 @@
             // 
             // gridTable
             // 
-            this.gridTable.Location = new System.Drawing.Point(13, 31);
+            this.gridTable.Location = new System.Drawing.Point(6, 6);
             this.gridTable.Name = "gridTable";
-            this.gridTable.Size = new System.Drawing.Size(705, 594);
+            this.gridTable.Size = new System.Drawing.Size(685, 574);
             this.gridTable.TabIndex = 6;
             // 
             // floorCB
@@ -243,18 +248,49 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(13, 13);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(705, 612);
+            this.tabControl1.TabIndex = 13;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.gridTable);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(697, 586);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(697, 586);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 655);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.editGB);
             this.Controls.Add(this.obstaclesLabel);
             this.Controls.Add(this.obstaclesCB);
             this.Controls.Add(this.floorTilesLabel);
             this.Controls.Add(this.floorCB);
-            this.Controls.Add(this.gridTable);
             this.Controls.Add(this.mapSizeGB);
             this.Controls.Add(this.modeGB);
             this.Name = "Form1";
@@ -268,6 +304,8 @@
             this.editGB.ResumeLayout(false);
             this.editGB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,6 +332,9 @@
         private System.Windows.Forms.RadioButton eraseRB;
         private System.Windows.Forms.RadioButton addRB;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
